@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/app/providers";
-import NavBar from "./component/NavBar";
+import NavBar from "@/app/component/NavBar";
 
 
 
@@ -21,8 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className} suppressHydrationWarning>
       <body>
-        <NavBar />
         <Providers>
+        <NavBar />
           {children}
         </Providers>
       </body>

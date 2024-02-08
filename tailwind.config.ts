@@ -27,6 +27,7 @@ const config: Config = {
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',
+        'dispaly':'display'
       }
     }
     

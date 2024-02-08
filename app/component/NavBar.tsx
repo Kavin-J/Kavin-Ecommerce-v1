@@ -7,10 +7,11 @@ import {
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
 function NavBar() {
+  const [isMenuOpen , setIsMenuOpen] = React.useState<boolean>(true)
   return (
     <nav className="relative mb-2 mt-3 flex h-auto w-full  flex-col px-8 py-4">
       <div className="flex h-14  w-full flex-row flex-wrap items-center justify-between mxl:container mxl:mx-auto ">
-        <h1 className=" text-2xl font-bold text-text-color">KVshop</h1>
+        <Link href='/' ><h1 className=" text-2xl font-bold text-text-color">KVshop</h1></Link>
         <ul className="me-auto ms-28 hidden lg:flex">
           <li className="me-4 h-auto w-auto font-bold transition-all delay-75 duration-150 hover:scale-110 text-primary-color scale-105">
             <Link className="p-2 " href="/">
@@ -32,13 +33,14 @@ function NavBar() {
             <h2 className="hidden font-semibold md:block">Login / Register</h2>
           </li>
 
-          <li className="ms-4 p-1 md:hidden">
+          <li className="ms-4 p-1 md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <Bars3BottomRightIcon width={32} height={32} />
           </li>
         </ul>
       </div>
-      <div className="absolute left-0 right-0 top-24 flex h-[450px] w-full items-center justify-center rounded-md bg-gray-50 opacity-80 shadow-sm transition-all delay-0 duration-500 ease-in-out md:hidden">
-        <ul className=" flex h-full w-full flex-col items-center justify-center space-y-7 text-center text-3xl text-secondary-text-color  opacity-100 transition-all delay-300 duration-500 ease-in-out">
+      <div className={`${isMenuOpen?`h-[450px]`:'h-0'} absolute left-0 right-0 top-24 flex w-full items-center justify-center rounded-md bg-gray-50 opacity-80 shadow-md transition-[height] delay-0 duration-100 md:hidden`}>
+
+        <ul className={`${isMenuOpen?'flex opacity-100':'hidden opacity-0'} h-full w-full flex-col items-center justify-center space-y-5 text-center text-2xl text-secondary-text-color transition-[display] delay-150 duration-500`}>
           <li className="w-auto p-1">
             <Link
               className="inline-block w-screen scale-110 rounded-md bg-orange-50 p-3 text-black"
