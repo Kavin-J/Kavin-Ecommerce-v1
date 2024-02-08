@@ -12,9 +12,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+
       },
       screens:{
         'mxl': '1440px',
@@ -23,10 +21,18 @@ const config: Config = {
         "text-color":"#252b42",
         "secondary-text-color":"#737373",
         "primary-color":'#23A6F0',
+        "hover-text-color":'#2A7CC7',
+        "gradient-s" : '#96E9FB',
+        'gradient-e' : '#ABECD6'
+        
       },
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
       }
     }
     
