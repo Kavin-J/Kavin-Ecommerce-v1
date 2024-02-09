@@ -9,7 +9,7 @@ import Link from "next/link";
 function NavBar() {
   const [isMenuOpen , setIsMenuOpen] = React.useState<boolean>(true)
   return (
-    <nav className="relative mb-2 mt-3 flex h-auto w-full  flex-col px-8 py-4">
+    <nav className="relative mb-2 mt-3 flex h-auto w-full  flex-col px-8 py-4 shadow-lg shadow-gray-100/50">
       <div className="flex h-14  w-full flex-row flex-wrap items-center justify-between mxl:container mxl:mx-auto ">
         <Link href='/' ><h1 className=" text-2xl font-bold text-text-color">KVshop</h1></Link>
         <ul className="me-auto ms-28 hidden lg:flex">
