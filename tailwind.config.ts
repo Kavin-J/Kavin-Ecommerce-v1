@@ -29,10 +29,7 @@ const config: Config = {
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',
-<<<<<<< Updated upstream
-=======
         
->>>>>>> Stashed changes
       }
     }
     
