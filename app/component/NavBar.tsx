@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
 function NavBar() {
-  const [isMenuOpen , setIsMenuOpen] = React.useState<boolean>(true)
+  const [isMenuOpen , setIsMenuOpen] = React.useState<boolean>(false)
   return (
     <nav className="relative mb-2 mt-3 flex h-auto w-full  flex-col px-8 py-4 shadow-lg shadow-gray-100/50">
       <div className="flex h-14  w-full flex-row flex-wrap items-center justify-between mxl:container mxl:mx-auto ">
