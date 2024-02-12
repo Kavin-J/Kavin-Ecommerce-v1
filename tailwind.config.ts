@@ -31,6 +31,8 @@ const config: Config = {
       },
       objectPosition: {
         "option-1": "top 50px right 0px",
+        "option-2": "bottom -20px right 0px",
+        "option-3": "bottom -20px right -75px",
       },
     },
   },
