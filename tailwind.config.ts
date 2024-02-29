@@ -20,6 +20,7 @@ const config: Config = {
       colors: {
         "text-color": "#252b42",
         "secondary-text-color": "#737373",
+        "secondary-color-1":"#23856D",
         "primary-color": "#23A6F0",
         "hover-text-color": "#2A7CC7",
         "gradient-s": "#96E9FB",
