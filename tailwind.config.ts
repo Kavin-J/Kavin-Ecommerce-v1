@@ -25,6 +25,7 @@ const config: Config = {
         "hover-text-color": "#2A7CC7",
         "gradient-s": "#96E9FB",
         "gradient-e": "#ABECD6",
+        "disable-element" : "#8EC2F2",
         primary:{
           DEFAULT:'rgb(45,139,192,0.75)',
         }
