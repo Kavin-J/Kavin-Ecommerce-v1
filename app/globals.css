@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
 
-
-
-
-
-
+@media (min-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: flex !important ;
+    color: #f1f1f1f1 !important;
+    border-radius: 8px;
+  }
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    display: flex !important ;
+    color: #fff !important;
+    transform: scale(1.1);
+    
+  }
+}

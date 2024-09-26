@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import HeroBanner from "./component/HeroBanner";
+import HeroBanner from "./component/HeroBanner/HeroBanner";
 import ClientComponent from "./component/ClientComponent";
 import ShopCard from "./component/ShopCard";
 import BestSeller from "./component/BestSeller";
@@ -15,15 +15,15 @@ function Page() {
 
       {/* Client Section */}
 
-      {/* <ClientComponent /> */}
+      <ClientComponent />
       
       {/*  shop card section */}
 
-      {/* <ShopCard /> */}
+      <ShopCard />
 
       {/* Best Seller Product */}
 
-      {/* <BestSeller /> */}
+      <BestSeller />
 
       {/* <FeatureProduct /> */}
       

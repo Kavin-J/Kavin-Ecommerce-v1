@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { Providers } from "@/app/providers";
-import NavBar from "@/app/component/NavBar";
 
-
+import Header from "@/app/component/header/Header";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,10 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className} suppressHydrationWarning>
       <body>
-        <Providers>
-        <NavBar />
-          {children}
-        </Providers>
+        
+        <div className="relative min-h-[100vh] h-auto bg-gray-900 w-full pt-24">
+        <Header />
+        {children}
+        </div>
+        
       </body>
     </html>
   );

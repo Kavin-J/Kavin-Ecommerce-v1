@@ -1,4 +1,5 @@
 import { nextui } from "@nextui-org/react";
+import { Roboto } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -12,27 +13,23 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {},
-      screens: {
-        "xs":"526px",
-        "mxl": "1440px",
-        
-      },
+      screens: {},
       colors: {
         "text-color": "#252b42",
         "secondary-text-color": "#737373",
-        "secondary-color-1":"#23856D",
+        "secondary-color-1": "#23856D",
         "primary-color": "#23A6F0",
         "hover-text-color": "#2A7CC7",
         "gradient-s": "#96E9FB",
         "gradient-e": "#ABECD6",
-        "disable-element" : "#8EC2F2",
-        primary:{
-          DEFAULT:'rgb(45,139,192,0.75)',
-        }
+        "disable-element": "#8EC2F2",
+        primary: {
+          DEFAULT: "rgb(45,139,192,0.75)",
+        },
       },
       transitionProperty: {
-        "height": "height",
-        "spacing": "margin, padding",
+        height: "height",
+        spacing: "margin, padding",
       },
       objectPosition: {
         "option-1": "top 50px right 0px",
