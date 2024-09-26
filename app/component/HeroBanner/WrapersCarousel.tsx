@@ -18,7 +18,7 @@ const WrapersCarousel = (props: PropsWithChildren) => {
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation, EffectFade]}
+        modules={[Pagination, Navigation, EffectFade, Autoplay]}
       >
         {React.Children.map(props.children, (child, index) => (
           <SwiperSlide key={index} className="">
