@@ -18,7 +18,7 @@ const Hero1 = (props: Props) => {
       </div>
       <div
         className={`z-10 flex flex-auto items-end 
-                       justify-center md:h-full md:w-1/2 md:items-center`}
+                       justify-start md:h-full md:w-1/2 md:items-center `}
       >
         <div className="flex flex-col items-center space-y-8 px-16 text-center md:items-start md:text-start">
           <h5 className="font-bold text-white drop-shadow-lg lg:text-lg">

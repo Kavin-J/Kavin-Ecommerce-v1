@@ -12,6 +12,27 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        slider: {
+          "0%": { transform: "translateX(-25%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "pulse-scale": {
+          "0%, 100%": {
+            transform: "scale(1)",
+            opacity:'1'
+            
+          },
+          "50%": {
+            transform: "scale(1.2)",
+            opacity:'0.8' // ขนาดใหญ่ขึ้น 20%
+          },
+        },
+      },
+      animation: {
+        slider: "slider 30s linear infinite",
+        "pulse-scale": "pulse-scale 1s ease-in-out infinite",
+      },
       backgroundImage: {},
       screens: {},
       colors: {
