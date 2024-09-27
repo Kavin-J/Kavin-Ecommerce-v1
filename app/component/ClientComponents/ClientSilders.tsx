@@ -86,7 +86,6 @@ const tailwindColorClasses: Record<string, string> = {
 export function randomColor() {
   const colors = Object.values(tailwindColorClasses);
   const randomIndex = Math.floor(Math.random() * colors.length);
-
   return colors[randomIndex];
 }
 const ClientSilders = (props: Props) => {

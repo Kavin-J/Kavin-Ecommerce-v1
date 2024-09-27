@@ -6,7 +6,7 @@ type Props = {};
 
 const Hero1 = (props: Props) => {
   return (
-    <div className="flex w-full flex-row-reverse flex-wrap-reverse items-center rounded-2xl bg-gradient-to-r from-sky-100 to-sky-300 pt-4 md:max-h-[960px] md:min-h-[660px] md:flex-row ">
+    <div className="flex w-full flex-row-reverse flex-wrap-reverse items-center rounded-2xl bg-gradient-to-r  from-sky-100 to-sky-300 pt-4 md:max-h-[960px] md:min-h-[660px] md:flex-row ">
       <div className="flex h-1/2 items-start justify-center md:h-full md:w-1/2  md:items-end md:self-start   md:overflow-x-visible">
         <Image
           className="object-co min-w-[453px] md:hidden"
@@ -42,7 +42,7 @@ const Hero1 = (props: Props) => {
             กับเทคโนโลยีการทอที่ทำให้ ผ้านุ่ม ระบายอากาศดี
           </h4>
           <Link
-            className="w-56 rounded-md bg-primary-color py-4 text-center text-2xl font-bold text-white shadow-md hover:bg-orange-400/80 "
+            className="w-56 rounded-md bg-primary-400 py-4 text-center text-2xl font-bold text-white shadow-md hover:bg-orange-400/80 "
             href="#"
           >
             SHOP NOW

@@ -4,7 +4,7 @@ import React, { HTMLAttributes } from "react";
 import Container from "../Container";
 import Carousel from "./Carousel";
 
-function HeroBanner() {
+export default async function HeroBanner() {
   return (
     <div className="flex h-full min-h-[660px] w-full bg-white">
       <Container className="flex" maxWidth="xl">
@@ -14,4 +14,3 @@ function HeroBanner() {
   );
 }
 
-export default HeroBanner;

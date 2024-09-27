@@ -6,7 +6,7 @@ type Props = {};
 
 const Hero1 = (props: Props) => {
   return (
-    <div className="relative flex h-full w-full flex-row-reverse flex-wrap-reverse items-center rounded-2xl bg-primary-300 pt-4 md:max-h-[960px] md:min-h-[660px] md:flex-row ">
+    <div className="relative flex h-full w-full flex-row-reverse flex-wrap-reverse items-center rounded-2xl overflow-hidden pt-4 md:max-h-[960px] md:min-h-[660px] md:flex-row ">
       <div className="absolute -left-40 top-0 flex h-full w-full overflow-visible md:-left-0">
         <Image
           width={1820}
@@ -28,7 +28,6 @@ const Hero1 = (props: Props) => {
             ลดแรงทั้งร้าน
             <p className="animate-bounce font-mono text-red-400">ลดสูงสด 50%</p>
           </h1>
-          <h4 className="text-xl text-secondary-text-color"></h4>
           <Link
             className="w-56 rounded-md bg-secondary-400 py-4 text-center text-2xl font-bold text-white shadow-md hover:bg-orange-400/80 "
             href="#"
