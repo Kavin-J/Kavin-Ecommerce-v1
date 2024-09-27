@@ -9,6 +9,8 @@ import Link from "next/link";
 import Logo from "../../ui/Iconsvg/Logo";
 import NavbarMenu from "./NavbarMenu";
 import { usePathname } from "next/navigation";
+import { useScrollDirection } from "@/app/hooks/useScrollDirection";
+
 export interface Navigation {
   href: string;
   name: string;
@@ -22,9 +24,13 @@ const navigation: Navigation[] = [
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(false);
   const pathName = usePathname();
+  const scrollDirection = useScrollDirection();
+  const isDown = scrollDirection === "down";
 
   return (
-    <nav className="fixed top-0 flex h-auto w-full min-w-96  flex-col bg-white/90  px-8 py-4 z-50 backdrop-blur-md shadow-md ">
+    <nav
+      className={`fixed top-0 z-50 flex h-auto w-full min-w-96 flex-col  bg-white/90 px-8 py-4 shadow-md backdrop-blur-md ${isDown ? "-translate-y-24" : ""} delay-200 duration-500`}
+    >
       <div className="flex h-14  w-full flex-row flex-nowrap items-center justify-between xl:container xl:mx-auto ">
         <Link href="/">
           <Logo className="w-40 text-primary-400/80 hover:scale-110 hover:text-primary-400 sm:w-48" />
