@@ -8,7 +8,7 @@ type Props = { products: Product[] };
 
 export default function BestSellerProducts({ products }: Props) {
   return (
-    <div className="grid grid-cols-1 gap-x-3 gap-y-7  rounded-md bg-white p-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
+    <div className="grid grid-cols-1 gap-x-3 gap-y-7  rounded-md bg-white p-2 md:p-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
       {products
         .filter((item, i) => item.category !== "electronics")
         .slice(0,12)

@@ -34,17 +34,17 @@ export default async function ProductCard({
 }: Props) {
   const [priceBath] = pricetoBath(price);
   return (
-    <div className="animate-pulse-scale-sm hover:animate-pulse-scale-sm w-full max-w-sm rounded-lg border border-gray-200 bg-white shadow hover:scale-[1.01] hover:bg-slate-50 dark:border-gray-700 dark:bg-gray-800">
-      <Link href="#">
+    <div className="animate-pulse-scale-sm md:animate-none hover:animate-pulse-scale-sm flex h-[550px] w-full max-w-sm flex-col rounded-lg border border-gray-200 bg-white shadow hover:scale-[1.01]  dark:border-gray-700 dark:bg-gray-800 ">
+      <div className="flex h-2/3 w-full items-center justify-center">
         <Image
           className="rounded-t-lg p-8"
           src={image}
           alt="product image"
-          width={800}
-          height={800}
+          width={250}
+          height={150}
         />
-      </Link>
-      <div className="px-5 pb-5">
+      </div>
+      <div className="flex h-1/3 flex-col justify-between px-5 pb-5">
         <a href="#">
           <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
             {title}
