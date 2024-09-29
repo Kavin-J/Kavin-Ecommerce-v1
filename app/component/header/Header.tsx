@@ -10,6 +10,7 @@ import Logo from "../../ui/Iconsvg/Logo";
 import NavbarMenu from "./NavbarMenu";
 import { usePathname } from "next/navigation";
 import { useScrollDirection } from "@/app/hooks/useScrollDirection";
+import Collapes from "./Collapes";
 
 export interface Navigation {
   href: string;
@@ -22,7 +23,7 @@ const navigation: Navigation[] = [
   { name: "Company", href: "#" },
 ];
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(true);
   const pathName = usePathname();
   const scrollDirection = useScrollDirection();
   const isDown = scrollDirection === "down";
@@ -48,42 +49,23 @@ function Header() {
           </li>
 
           <li
-            className="ms-4 p-1 md:hidden"
+            className="ms-4 p-1 lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <Bars3BottomRightIcon width={32} height={32} />
           </li>
         </ul>
       </div>
-      <div
-        className={`${isMenuOpen ? `h-[450px]` : "h-0"} absolute left-0 right-0 top-24 flex w-full items-center justify-center rounded-md bg-gray-50 opacity-80 shadow-md transition-[height] delay-0 duration-100 md:hidden`}
-      >
-        <ul
-          className={`${isMenuOpen ? "flex opacity-100" : "hidden opacity-0"} h-full w-full flex-col items-center justify-center space-y-5 text-center text-2xl text-secondary-text-color transition-[display] delay-150 duration-500`}
-        >
-          <li className="w-auto p-1">
-            <Link
-              className="inline-block w-screen scale-110 rounded-md bg-orange-50 p-3 text-black"
-              href="/"
-            >
-              Home
-            </Link>
-          </li>
-          <li className="w-auto p-1">
-            <Link
-              className="inline-block w-screen rounded-md p-3 text-black"
-              href="/product"
-            >
-              Product
-            </Link>
-          </li>
-          <li className="">Porduct</li>
-          <li className="">Pricing</li>
-          <li className="">Contact</li>
-        </ul>
-      </div>
+      <Collapes
+        navigate={navigation}
+        open={isMenuOpen}
+        onOpen={setIsMenuOpen}
+      />
     </nav>
   );
 }
 
 export default Header;
+{
+  /* <Collapes navigate={navigation} open={isMenuOpen} /> */
+}

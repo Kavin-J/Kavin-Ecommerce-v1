@@ -20,28 +20,26 @@ const config: Config = {
         "pulse-scale": {
           "0%, 100%": {
             transform: "scale(1)",
-            opacity:'1'
-            
+            opacity: "1",
           },
           "50%": {
             transform: "scale(1.2)",
-            opacity:'0.8'
+            opacity: "0.8",
           },
         },
         "pulse-scale-sm": {
           "0%, 100%": {
             transform: "scale(1)",
-            opacity:'1'
-            
+            opacity: "1",
           },
           "50%": {
             transform: "scale(0.99)",
-            opacity:'0.9' 
+            opacity: "0.9",
           },
         },
       },
       animation: {
-        slider: "slider 30s linear infinite",
+        slider: "slider 40s linear infinite",
         "pulse-scale": "pulse-scale 1s ease-in-out infinite",
         "pulse-scale-sm": "pulse-scale-sm 1s ease-in-out infinite",
       },

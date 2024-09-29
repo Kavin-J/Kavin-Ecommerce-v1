@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Product } from "./BestsellerProduct/BestSeller";
+import { Product } from "../BestSeller";
 import { error } from "console";
 
 type Props = {} & Product;
@@ -34,19 +34,19 @@ export default async function ProductCard({
 }: Props) {
   const [priceBath] = pricetoBath(price);
   return (
-    <div className="animate-pulse-scale-sm md:animate-none hover:animate-pulse-scale-sm flex h-[550px] w-full max-w-sm flex-col rounded-lg border border-gray-200 bg-white shadow hover:scale-[1.01]  dark:border-gray-700 dark:bg-gray-800 ">
+    <div className="animate-pulse-scale-sm hover:animate-pulse-scale-sm flex h-[560px] w-full max-w-sm flex-col rounded-lg border border-gray-200 bg-white shadow hover:scale-[1.01] dark:border-gray-700  dark:bg-gray-800 md:animate-none ">
       <div className="flex h-2/3 w-full items-center justify-center">
         <Image
           className="rounded-t-lg p-8"
           src={image}
-          alt="product image"
+          alt={title}
           width={250}
           height={150}
         />
       </div>
       <div className="flex h-1/3 flex-col justify-between px-5 pb-5">
         <a href="#">
-          <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="max-h-20 overflow-hidden text-ellipsis text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
             {title}
           </h5>
         </a>
@@ -99,7 +99,7 @@ export default async function ProductCard({
             </svg>
           </div>
           <span className="ms-3 rounded bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-800 dark:bg-blue-200 dark:text-blue-800">
-            {rating.rate}
+            {rating.count}
           </span>
         </div>
         <div className="flex items-center justify-between">
