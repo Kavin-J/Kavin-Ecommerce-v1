@@ -8,7 +8,6 @@ import {
 import Link from "next/link";
 import Logo from "../../ui/Iconsvg/Logo";
 import NavbarMenu from "./NavbarMenu";
-import { usePathname } from "next/navigation";
 import { useScrollDirection } from "@/app/hooks/useScrollDirection";
 import Collapes from "./Collapes";
 
@@ -22,9 +21,9 @@ const navigation: Navigation[] = [
   { name: "Marketplace", href: "#market" },
   { name: "Company", href: "#" },
 ];
-function Header() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(true);
-  const pathName = usePathname();
+
   const scrollDirection = useScrollDirection();
   const isDown = scrollDirection === "down";
 
@@ -65,7 +64,3 @@ function Header() {
   );
 }
 
-export default Header;
-{
-  /* <Collapes navigate={navigation} open={isMenuOpen} /> */
-}
