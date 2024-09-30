@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import HeroBanner from "./component/HeroBanner/HeroBanner";
 import ClientComponent from "./component/ClientComponents/ClientComponent";
@@ -10,13 +9,13 @@ import BlogPosts from "./component/BlogPosts";
 
 function Page() {
   return (
-    <>
+    <div>
       <HeroBanner />
 
       {/* Client Section */}
 
-      <ClientComponent /> 
-      
+      <ClientComponent />
+
       {/*  shop card section */}
 
       {/* <ShopCard /> */}
@@ -26,12 +25,9 @@ function Page() {
       <BestSeller />
 
       {/* <FeatureProduct /> */}
-      
+
       {/* <BlogPosts /> */}
-
-
-      
-    </>
+    </div>
   );
 }
 
