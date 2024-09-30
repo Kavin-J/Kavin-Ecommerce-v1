@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { PropsWithChildren } from "react";
-import { Navigation } from "./Header";
+import { Navigation } from "./NavigationBar";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 

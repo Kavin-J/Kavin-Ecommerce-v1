@@ -9,7 +9,6 @@ type Props = {};
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export default async function BestSellerProducts({}: Props) {
-  await delay(1500);
   const res = await fetch("https://fakestoreapi.com/products", {
     cache: "no-store",
   });
