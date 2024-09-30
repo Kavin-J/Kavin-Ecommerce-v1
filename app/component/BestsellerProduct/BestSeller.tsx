@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React, { Suspense } from "react";
 import { ProductCard } from "react-ui-cards";
-import BestSellerProduct from "./BestSellers.tsx/BestSellerProducts";
-import BestSellerProducts from "./BestSellers.tsx/BestSellerProducts";
+import BestSellerProduct from "./BestSellersProd/BestSellerProducts";
+import BestSellerProducts from "./BestSellersProd/BestSellerProducts";
 import ProductCardSkeleton from "./ProductCard/ProductCardSkeleton";
-import BestSellerSkeleton from "./BestSellers.tsx/BestSellerSkeleton";
+import BestSellerSkeleton from "./BestSellersProd/BestSellerSkeleton";
 export type Rating = {
   rate: number;
   count: number;

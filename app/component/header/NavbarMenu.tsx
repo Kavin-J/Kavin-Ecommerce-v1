@@ -10,7 +10,7 @@ type Props = {
 
 const NavbarMenu = (props: PropsWithChildren<Props>) => {
   const pathName = usePathname();
-  const isMatch = (href: string) => href === pathName;
+
 
   return (
     <ul
